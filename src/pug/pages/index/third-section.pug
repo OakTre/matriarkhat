@@ -1,0 +1,40 @@
+- let innovation_list = ["Незаметно", "Безвредно", "Удобно", "Легко", "Долговечно", "Полезно"]
+- let innovation_num = 0
+- let innovation_num2 = 0
+
+section.section.innovation
+	.site-container
+		.innovation__row.tabs
+			.innovation__col
+				.innovation__title
+					h2
+						|	Наращиваем волосы
+						span
+							|	по инновационной итальянской технологии
+				ul.innovation__content
+					each item in innovation_list
+						- innovation_num++
+						- if (innovation_num == 1)
+							li(class="innovation__content-item _active tabs__content", data-tabs-child=innovation_num)
+								._overflow
+									h3= item
+									p
+										|	Капсулы размером 2 мм теряются в родных волосах: они не видны в высоких прическах и при дуновении ветра.
+									.innovation__content-item-img
+										+pictureLazy("innovation-img.jpg", "Незаметно")
+						- else
+							li(class="innovation__content-item tabs__content", data-tabs-child=innovation_num)
+								._overflow
+									h3= item
+									p
+										|	Капсулы размером 2 мм теряются в родных волосах: они не видны в высоких прическах и при дуновении ветра.
+									.innovation__content-item-img
+										+pictureLazy("innovation-img.jpg", "Незаметно")
+			.innovation__col
+				ul.innovation__nav
+					each item in innovation_list
+						- innovation_num2++
+						- if (innovation_num2 == 1)
+							li(class="innovation__nav-item _active tabs__button", data-tabs-parent=innovation_num2)= item
+						- else
+							li(class="innovation__nav-item tabs__button", data-tabs-parent=innovation_num2)= item

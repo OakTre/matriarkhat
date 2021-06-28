@@ -1,0 +1,183 @@
+.dreams {
+	position: relative;
+	padding-bottom: 350px;
+	z-index: 10;
+
+	&__bg-img {
+		position: absolute;
+		top: 310px;
+		left: 16%;
+		z-index: -1;
+
+		.icon-dreams-bg {
+			width: 1186px;
+			height: 1090px;
+
+			fill: #1A1A1D;
+		}
+	}
+
+	&__title {
+		margin-top: 6px;
+		margin-bottom: 65px;
+		pointer-events: none;
+		h2 {
+			font-family: $second-font-family;
+			font-weight: 400;
+			font-size: rem(40px);
+			line-height: 1;
+			color: $color-white;
+			margin: 0;
+			text-align: center;
+
+			sub {
+				font-size: rem(24px);
+				line-height: 1;
+				bottom: 0;
+			}
+
+			span {
+				display: block;
+				font-size: rem(40px);
+				line-height: 1.6;
+				color: $color-brown-light;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				margin-top: 14px;
+			}
+		}
+	}
+
+
+	&__list {
+		display: flex;
+		align-items: flex-start;
+		margin: -16px;
+		margin-top: -269px;
+	}
+
+	&__list-item {
+		position: relative;
+		width: calc(33.3% - 32px);
+		margin: 16px;
+
+		&._events-none {
+			pointer-events: none;
+		}
+
+		&-link {
+			display: block;
+			box-shadow: 0 6px 10px rgba($color: #121314, $alpha: 0.3);
+
+			&:hover {
+				.dreams__list-item_top {
+					&::before {
+						opacity: 1;
+					}
+				}
+				.dreams__list-item-button {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
+		&_top {
+			position: relative;
+			padding-top: 591px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($color: #26272A, $alpha: 0.4);
+				opacity: 0;
+				transition: opacity $main-transition;
+			}
+		}
+
+		&-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin-right: -50%;
+			padding: 23px 0;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity $main-transition;
+
+			._dreams-circle {
+				height: 66px;
+				width: 46px;
+				left: -12%;
+				&::before {
+					height: 61px;
+					width: 61px;
+				}
+			}
+
+			.icon-button-arrow {
+				width: 38px;
+				height: 16px;
+				will-change: width;
+			}
+
+			&:hover {
+				.icon-button-arrow {
+					width: 46px;
+					height: 41px;
+					margin-right: 10px;
+					transform: translateX(0px);
+				}
+
+				._dreams-circle {
+					width: 66px;
+				}
+			}
+		}
+
+		&-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&_bottom {
+			padding: 56px;
+			background-color: $color-brown-light;
+
+			h3 {
+				font-family: $second-font-family;
+				font-weight: 400;
+				font-size: rem(16px);
+				line-height: 1.2;
+				color: $color-dark;
+				margin: 0;
+				margin-bottom: 16px;
+				text-transform: uppercase;
+			}
+
+			p {
+				margin: 0;
+				line-height: 1.5;
+				color: $color-dark;
+				max-width: 92%;
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,30 @@
+- let number = 1
+- let feautures_list = ["Мягкие детские и славянские волосы", "Ультралегкие микрокапсулы по 2 мм", "Премиум-материалы Brae, Lebel, Redken"]
+
+section.section.examples
+	.examples__feautures
+		.examples__feautures-img._first
+			img(src="img/feautures-img1.png", alt="Мягкие детские и славянские волосы")
+		.examples__feautures-img._second
+			img(src="img/feautures-img2.png", alt="Премиум-материалы")
+		ul.examples__feautures-list
+			each item in feautures_list
+				li.examples__feautures-list-item= item
+
+	.site-container
+		.examples__title
+			h2
+				|	Мы поможем тебе
+				span
+					|	влюбиться в себя
+		.examples__slider.swiper-container
+			.swiper-wrapper
+				- for (var x = 0; x < 3; x++)
+					.examples__slider-item.swiper-slide
+						+picture("examples-img"+`${ number++ }`+".png", "Примеры наших работ")
+		.examples__slider-nav
+			.examples__slider-nav-btn_left
+				+icon("arrow-left")
+			.examples__slider-nav-btn_right
+				+icon("arrow-right")
+		.examples__slider-pagination

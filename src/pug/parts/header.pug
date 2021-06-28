@@ -1,0 +1,26 @@
+header.header
+	.site-container
+		.header__inner
+			a(class="header__logo main-logo", href="#")
+				img(src="img/logo.png", alt="Лого")
+				p
+					|	Студия архитектуры волос Марины Пилюковой
+			.header__location.main-location
+					+icon("marker")
+					p
+						|	Москва, м. Белорусская
+			.header__btn-group
+				.phone-content_wrap
+					+icon("phone")
+					a(class="phone-content", href="tel:+79851350584")
+						|	+7 (985) 135-05-84
+
+				button.button_reset.header__button-call
+					span
+						|	Заказать звонок
+			button.header__burger.button_reset
+				span
+				span
+				|	меню
+
+

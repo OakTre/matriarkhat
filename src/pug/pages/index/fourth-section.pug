@@ -1,0 +1,44 @@
+- let dreams_list = {"Длинные локоны": "Если ты с детства мечтала о кудрях до пояса – мы преобразим тебя всего за несколько часов.", "Густые волосы": "Все заметят, что ты похорошела, но никто не догадается, почему.", "Исправление стрижки": "Эксперимент со сменой имиджа оказался неудачным? У нас в студии ты посмотришь в зеркало и скажешь: «Вот это – я»."}
+- let dreams_num = 0
+
+section.section.dreams
+	.dreams__bg-img
+		+icon("dreams-bg")
+	.site-container
+		ul.dreams__list
+			each val, key in dreams_list
+				- dreams_num++
+				if (dreams_num == 2)
+					li.dreams__list-item._events-none
+						.dreams__title
+							h2
+								|	10
+								sub
+									|	лет
+								span
+									|	воплощаем мечты
+						a(class="dreams__list-item-link", href="#")
+							.dreams__list-item_top
+								.dreams__list-item-button.main-button
+									.main-button__circle._dreams-circle
+									+icon("button-arrow")
+									|	Узнать подробнее
+								.dreams__list-item-img
+									+picture("dreams-img"+`${dreams_num}`+".jpg", `${key}`)
+							.dreams__list-item_bottom
+								h3= key
+								p= val
+				else
+					li.dreams__list-item._events-none
+						a(class="dreams__list-item-link", href="#")
+							.dreams__list-item_top
+								.dreams__list-item-button.main-button
+									.main-button__circle._dreams-circle
+									+icon("button-arrow")
+									|	Узнать подробнее
+								.dreams__list-item-img
+									+picture("dreams-img"+`${dreams_num}`+".jpg", `${key}`)
+							.dreams__list-item_bottom
+								h3= key
+								p= val
+

@@ -1,0 +1,140 @@
+.mobile-menu {
+	position: fixed;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	z-index: 150;
+	background-color: $color-dark;
+	box-shadow: 0 10px 15px rgba($color: $color-dark2, $alpha: 0.9);
+
+	&__item {
+		&:nth-child(2) {
+			margin-left: auto;
+		}
+	}
+
+	&__inner {
+		padding: 20px;
+	}
+
+	&__call {
+		transform: translateY(-440%);
+		.phone-content {
+			color: $color-light-grey-1;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 20px;
+		overflow: hidden;
+	}
+
+	&__location {
+		transform: translateY(-440%);
+	}
+
+	&__button-call {
+		padding-right: 19.5px;
+		transform: translateY(-440%);
+	}
+
+	&__button {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		width: 80px;
+		height: 60px;
+		color: $color-brown-light;
+		margin-left: auto;
+		margin-right: 28px;
+		transform: translateY(-200%);
+
+		span {
+			position: absolute;
+			top: 18px;
+			left: 50%;
+			display: block;
+			width: 40px;
+			height: 4px;
+			background-color: $color-brown-light;
+			transform: translateX(-50%);
+
+			&:nth-child(1) {
+				transform: translateX(-50%) rotate(45deg);
+			}
+			&:nth-child(2) {
+				transform: translateX(-50%) rotate(-45deg);
+			}
+		}
+	}
+
+	@include _740 {
+		&__inner {
+			padding-bottom: 0;
+		}
+		&__content {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		&__location,
+		&__call {
+			margin-bottom: 24px;
+		}
+
+		&__item {
+			overflow: hidden;
+			width: 100%;
+			&:nth-child(2) {
+				margin-left: 0;
+			}
+		}
+
+		&__button-call {
+			margin-left: 0;
+			border-left: none;
+			padding-left: 0;
+			border-top: 1px solid #858586;
+			width: 100%;
+			span {
+				display: inline-block;
+			}
+		}
+	}
+
+	@include _600 {
+		&__content {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&__button {
+			margin-right: 0;
+		}
+	}
+
+	@include _320 {
+		&__inner {
+			padding-top: 15px;
+		}
+		&__button {
+			width: 70px;
+			height: 50px;
+
+			span {
+				top: 14px;
+				width: 30px;
+			}
+		}
+		&__location,
+		&__call {
+			margin-bottom: 20px;
+		}
+	}
+
+}

@@ -1,0 +1,157 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		margin-right: 103px;
+
+	}
+
+	&__btn-group {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		background-color: $color-dark2;
+		padding: 15.5px 32px 15.5px 28px ;
+
+		.phone-content {
+			position: relative;
+			color: $color-white !important;
+		}
+
+		.phone-content_wrap {
+			padding: 22px 0;
+			display: flex;
+			align-items: center;
+
+			.icon-phone {
+				width: 18px;
+				height: 18px;
+
+				fill: $color-light-grey-2;
+			}
+		}
+	}
+
+	&__button-call {
+		padding: 20px 0;
+		padding-left: 29.5px;
+		margin-left: 30px;
+		border-left: 1px solid #858586;
+		cursor: pointer;
+
+		span {
+			position: relative;
+			display: block;
+			color: $color-brown-light;
+			overflow: hidden;
+			height: 22px;
+			&::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 2px;
+				border-bottom: 1px dashed $color-brown-light;
+				transition: right $main-transition;
+			}
+		}
+
+		&:hover {
+			span {
+				&::before {
+					right: -100%;
+				}
+			}
+		}
+	}
+
+	&__burger {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: $color-dark2;
+		color: $color-brown-light;
+		padding: 25px 30px;
+		margin-left: auto;
+		span {
+			display: block;
+			width: 90%;
+			height: 4px;
+			background-color: $color-brown-light;
+			margin-bottom: 5px;
+		}
+	}
+
+	@include _1440 {
+		&__logo {
+			margin-right: 63px;
+		}
+	}
+
+	@include _1280 {
+		&__button-call:not(.mobile-menu__button-call) {
+			display: none;
+		}
+	}
+
+	@include _1200 {
+
+		&__btn-group {
+			display: none;
+		}
+
+		&__logo {
+			margin-right: 43px;
+		}
+
+		&__burger {
+			display: flex;
+		}
+	}
+
+	@include _992 {
+		&__location {
+			display: none;
+		}
+
+		&__logo {
+			p {
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	@include _600 {
+		&__logo {
+			margin-right: 23px;
+		}
+	}
+
+
+	@include _500 {
+		overflow: hidden;
+		&__burger {
+			margin-right: -100%;
+			padding-right: 102%;
+			padding-left: 30px;
+		}
+	}
+
+	@include _480 {
+		&__logo {
+			p {
+				display: none;
+			}
+		}
+	}
+}
