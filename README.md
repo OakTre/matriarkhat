@@ -1,5 +1,5 @@
 # Сайт-лендинг для компании "Матриархат"
-[Ссылка на проект](https://github.com/OakTre/matriarkhat/app/index.html "https://github.com/OakTre/matriarkhat/app/index.html")
+[Ссылка на проект](https://oaktre.github.io/matriarkhat/app/index.html "https://oaktre.github.io/matriarkhat/app/index.html")
 
 ## Список команд
 
