@@ -1,0 +1,66 @@
+section.section.consultation
+	.consultation__img-bg
+		+pictureLazy("consultation-img-bg.png", "Девушка")
+	.site-container
+		.consultation__row
+			.consultation__col
+				.consultation__img
+					+pictureLazy("consultation-img.png", "Девушка")
+			.consultation__col
+				.consultation_form-wrapper
+					form.consultation__form.consultation-form
+						.consultation-form__title
+							h2
+								|	Приходи в студию на
+								span
+									|	бесплатную консультацию
+							p
+								|	Обсудим твой будущий образ, оценим волосы, подберем срез и скажем окончательную цену.
+						.consultation-form__group
+							.consultation-form__group-col
+								label.consultation-form__label
+									span.consultation-form__legend
+										+icon("user")
+										|	Имя
+									input(class="consultation-form__input", type="text", name="name")
+								label.consultation-form__label
+									span.consultation-form__legend
+										+icon("tel")
+										|	Номер телефона
+									input(class="consultation-form__input", type="tel", name="tel")
+								label.consultation-form__label._textarea
+									span.consultation-form__legend._textarea-legend
+										+icon("text")
+										|	Желаемый образ
+									textarea(class="consultation-form__textearea", name="text", placeholder="Какое наращивание ты хочешь? Длина, загущение – воплотим любую твою идею!")
+							.consultation-form__group-col
+								label.consultation-form__file-label
+									input(class="consultation-form__input-file visually-hidden", type="file")
+									span.consultation-form__file-label-icon
+										+icon("file")
+										span.consultation-form__file-label-icon-text
+											|	Прикрепите макет
+									p.consultation-form__file-label-text
+										|	Мы предварительно оценим твои волосы и примерно сориентируем тебя по цене.
+								.consultation-form__agreement.form-agreement
+									input(class="form-agreement__input visually-hidden", type="checkbox", id="form-agreement", checked="checked")
+									label(class="form-agreement__text", for="form-agreement")
+										span.form-agreement__box
+												<svg class="icon-checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.75 22.75">
+													<g id="checked" transform="translate(-13.026 -1.898)">
+														<path id="circle" d="M33,41.8a8.882,8.882,0,1,1-5.084-5.964l1.321-2.123a11.416,11.416,0,1,0,5.429,5.413Z" transform="translate(0 -30.718)"/>
+														<path id="check" d="M115.778.214a1.42,1.42,0,0,0-1.956.455l-5.646,9.072-1.891-2.7a1.42,1.42,0,1,0-2.325,1.631l3.124,4.456a1.421,1.421,0,0,0,1.163.6h.039a1.42,1.42,0,0,0,1.166-.669l6.781-10.9A1.419,1.419,0,0,0,115.778.214Z" transform="translate(-83.539 4.787)"/>
+													</g>
+												</svg>
+										|	Я даю свое согласие на обработку персональных данных и соглашаюсь с
+										a(href="", class="form-agreement__link")
+											|	 политикой конфиденциальности
+						.consultation-form_button-wrapper
+							button.consultation-form__button.button_reset.main-button
+								.main-button__circle._form-circle
+								+icon("button-arrow")
+								|	Записаться на консультацию
+							p.consultation-form__button-text
+								|	Мы перезвоним и лично пригласим тебя в студию.
+
+

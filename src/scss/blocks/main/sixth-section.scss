@@ -1,0 +1,124 @@
+.facts {
+	&__row {
+		display: flex;
+	}
+
+	&__bg-icon {
+		position: absolute;
+		top: -385px;
+		left: -206px;
+
+		.icon-dreams-bg {
+			width: 1196px;
+			height: 1682px;
+			fill: #1A1A1D;
+			opacity: 0.7;
+		}
+	}
+
+	&__col {
+		position: relative;
+		&:nth-child(2) {
+			max-width: 47%;
+			width: 100%;
+			padding: 80px 0;
+		}
+		&:nth-child(1) {
+			position: relative;
+			z-index: 10;
+			max-width: 53%;
+			width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 64px;
+		max-width: 451px;
+		h2 {
+			font-family: $second-font-family;
+			font-weight: 400;
+			font-size: rem(24px);
+			line-height: 1;
+			color: $color-white;
+			margin: 0;
+			span {
+				display: block;
+				font-size: rem(40px);
+				line-height: 1.6;
+				color: $color-brown-light;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				margin-top: 14px;
+			}
+		}
+	}
+
+	&__list {
+		width: 100%;
+		counter-reset: section;
+		display: flex;
+		flex-direction: column;
+
+		&-item {
+			position: relative;
+			display: block;
+			max-width: 659px;
+			padding: 52px 25px 40px 0;
+			background-color: transparent;
+			margin-bottom: 52px;
+			padding-left: 0;
+
+			&:not(:nth-child(2n)) {
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: -100%;
+					box-shadow: 0 6px 10px rgba($color: #121314, $alpha: 0.3);
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:nth-child(2n) {
+				margin-left: 230px;
+				padding-left: 37px;
+				box-shadow: 0 6px 10px rgba($color: #121314, $alpha: 0.3);
+
+
+				&::before {
+					left: 37px;
+				}
+			}
+
+			p {
+				color: $color-white;
+				font-size: 1rem;
+				line-height: 1.5;
+				max-width: 448px;
+				margin: 0;
+
+				span {
+					font-family: $second-font-family;
+				}
+			}
+
+			&::before {
+				counter-increment: section;
+				content: "0" counter(section);
+				position: absolute;
+				top: 5px;
+				left: -2px;
+				font-family: $second-font-family;
+				font-size: rem(32px);
+				line-height: 1;
+				color: $color-light-grey-2;
+			}
+		}
+
+	}
+}

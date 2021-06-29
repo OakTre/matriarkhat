@@ -11,9 +11,11 @@ export function initTabs() {
 
 	if (tabs) {
 		tabs.addEventListener("click", function(e){
-
 			if(e.target.classList.contains("tabs__button")) {
 				const tabsPath = e.target.dataset.tabsParent;
+				console.log(tabsPath);
+				tabsButton.forEach(function(el){ el.classList.remove("_active") })
+				document.querySelector(`[data-tabs-parent="${tabsPath}"]`).classList.add("_active");
 				tabsHandler(tabsPath);
 			}
 		});
@@ -53,7 +55,6 @@ export function initTabs() {
 		currentNavItem.classList.add("_active");
 
 		tabsContent.forEach(function(el) {
-
 			el.classList.remove("_active");
 
 			timeline.reverse();

@@ -1,0 +1,48 @@
+- contacts_num = 0
+section.section.contacts
+	.site-container
+		.contacts__row
+			.contacts__col
+				.contacts__title
+					h2
+						span
+							|	Тебе понравится
+						|	в нашем женском царстве
+				ul.contacts__info
+					li.contacts__info-item
+						span
+							|	Адрес:
+						|	Москва, 3-я улица Ямского поля, 9 к. 3
+					li.contacts__info-item
+						span
+							|	Телефон:
+						|	+7 (985) 135-05-84
+						a(class="contacts__info-item-tel", href="tel:+79851350584")
+							|	Заказать звонок
+					li.contacts__info-item
+						span
+							|	Координаты:
+						|	55.780937, 37.580167
+						a(class="contacts__info-item-coordinates", href="#")
+							|	Скопировать
+				.contacts__inst
+					.contacts__inst-info
+						span.contacts__inst-info-label
+							|	Instagram:
+						.contacts__inst-logo
+							+icon("inst")
+							|	@matriarkhat
+					.contacts__inst-link
+						a(class="main-button contacts__button", href="#")
+							.main-button__circle._contacts-circle
+							+icon("button-arrow")
+							|	Подписаться
+			.contacts__col
+				div(class="contacts__map", id="ymap")
+		ul.contacts__gallery
+			.swiper-wrapper
+				- for (var x = 0; x < 6; x++)
+					- contacts_num++
+					li.contacts__gallery-item.swiper-slide
+						.contacts__gallery-item-img
+							+picture("gallery-img-"+`${contacts_num}`+".jpg", "Фотографии из инстаграмма")

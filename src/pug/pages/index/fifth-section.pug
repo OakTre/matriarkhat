@@ -1,0 +1,49 @@
+- specialists_list = ["Колорист", "Дизайнер волос", "2 мастера-капсулятора", "2 мастера по наращиванию"]
+- specialists_content_list = {"Колорист": "Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания.", "Специалист по дизайну волос": "подготавливает срез под необходимый цвет. При осветлении мы делаем упор на наращенные прядки, чтобы не вредить родным волосам.", "2 мастера-капсулятора": "Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания.", "2 мастера по наращиванию": "Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания."}
+- specialists_num = 0
+- specialists_num2 = 0
+
+section.section.specialists
+	.specialists__img
+		+pictureLazy("specialists-img-bg.png", "Наш специалист")
+	.site-container
+		.specialists__row.tabs
+			.specialists__col
+				.specialists__title
+					h2
+						|	Твоим преображением займутся сразу
+						span
+							|	6 специалистов
+				ul.specialists__nav
+					each val in specialists_list
+						- specialists_num++
+						- if (specialists_num == 1)
+							li(class='specialists__nav-item _active tabs__button', data-tabs-parent=specialists_num)= val
+						- else
+							li(class='specialists__nav-item tabs__button', data-tabs-parent=specialists_num)= val
+			.specialists__col
+				ul.specialists__content
+					each val, key in specialists_content_list
+						- specialists_num2++
+						- if (specialists_num2 == 1)
+							li(class="specialists__content-item _active tabs__content", data-tabs-child=specialists_num2)
+								.specialists__content-item-img.tabs__image
+									+pictureLazy("specialists-img"+`${specialists_num2}`+".jpg", `${key}`)
+								article.specialists__content-item-article
+									h3= key
+									p= val
+									button.button_reset.specialists__button
+										.specialists__button-circle
+											+icon("icon-arrow2")
+										|	Получить консультацию
+						- else
+							li(class="specialists__content-item tabs__content", data-tabs-child=specialists_num2)
+								.specialists__content-item-img.tabs__image
+									+pictureLazy("specialists-img"+`${specialists_num2}`+".jpg", `${key}`)
+								article.specialists__content-item-article
+									h3= key
+									p= val
+									button.button_reset.specialists__button
+										.specialists__button-circle
+											+icon("icon-arrow2")
+										|	Получить консультацию

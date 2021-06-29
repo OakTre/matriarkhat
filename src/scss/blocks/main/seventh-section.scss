@@ -1,0 +1,271 @@
+.contacts {
+	background-color: $color-white;
+	padding-bottom: 100px;
+
+	&__row {
+		display: flex;
+	}
+
+	&__col {
+		position: relative;
+		&:nth-child(1) {
+			padding: 106px 0 214px 0;
+			background-image: url(../img/innovation-bg.webp);
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			max-width: 674px;
+			width: 100%;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background-image: url(../img/innovation-bg.webp);
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		}
+
+		&:nth-child(2) {
+			margin-top: 112px;
+			margin-left: 141px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 71px;
+		max-width: 494px;
+		h2 {
+			font-family: $second-font-family;
+			font-weight: 400;
+			font-size: rem(24px);
+			line-height: 1;
+			color: $color-white;
+			margin: 0;
+			span {
+				display: block;
+				font-size: rem(40px);
+				line-height: 1.6;
+				color: $color-brown-light;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				margin-bottom: 9px;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-item {
+			font-size: 1rem;
+			color: $color-white;
+
+			span {
+				font-family: $second-font-family;
+				font-size: 1rem;
+				display: block;
+				color: $color-white;
+				margin-bottom: 17px;
+				text-transform: uppercase;
+			}
+
+
+			&:nth-child(1) {
+				margin-right: 93px;
+				margin-bottom: 42px;
+			}
+
+			&:nth-child(3) {
+				span {
+					margin-bottom: 9px;
+				}
+			}
+
+			&:nth-child(2) {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			&-coordinates {
+				position: relative;
+				color: $color-brown-light;
+				font-size: 1rem;
+				display: inline-block;
+				overflow: hidden;
+				padding-bottom: 3px;
+				transform: translateY(7px);
+				margin-left: 20px;
+
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 2px;
+					border-bottom: 1px dashed $color-brown-light;
+					transition: transform $main-transition;
+				}
+
+				&:hover {
+					&::before {
+						transform: translateX(100%);
+					}
+				}
+			}
+
+			&-tel {
+				position: relative;
+				color: $color-brown-light;
+				font-size: 1rem;
+				display: inline-block;
+				overflow: hidden;
+				padding-bottom: 3px;
+				margin-top: 17px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 2px;
+					border-bottom: 1px dashed $color-brown-light;
+					transition: transform $main-transition;
+				}
+
+				&:hover {
+					&::before {
+						transform: translateX(100%);
+					}
+				}
+			}
+		}
+	}
+
+	&__inst {
+		position: relative;
+		background-color: $color-dark;
+		margin-top: 44px;
+		padding: 54px 0;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background-color: $color-dark;
+		}
+	}
+
+	&__inst-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-right: 88px;
+	}
+
+	&__inst-logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $color-white;
+
+		.icon-inst {
+			width: 21px;
+			height: 21px;
+			margin-right: 11px;
+			fill: $color-brown-light;
+		}
+	}
+
+	&__inst-info-label {
+		font-family: $second-font-family;
+		font-size: 1rem;
+		display: block;
+		color: $color-white;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+
+	&__button {
+		padding: 31px 0;
+		._contacts-circle {
+			width: 63px;
+			height: 83px;
+			&::before {
+				width: 78px;
+				height: 78px;
+			}
+		}
+
+		.icon-button-arrow {
+			width: 58px;
+			height: 16px;
+			margin-right: 15px;
+		}
+
+		&:hover {
+			.icon-button-arrow {
+				width: 44px;
+				height: 16px;
+				margin-right: 15px;
+			}
+
+			._contacts-circle {
+				width: 83px;
+			}
+		}
+	}
+
+	&__map {
+		width: 784px;
+		height: 487px;
+		margin-left: auto;
+	}
+
+	&__gallery {
+		margin-top: -170px;
+		overflow: hidden;
+		min-height: 301px;
+	}
+
+	&__gallery-item {
+		&:nth-child(2n) {
+			transform: translateY(54px);
+		}
+	}
+
+	&__gallery-item-img {
+		position: relative;
+		z-index: 10;
+		display: inline-block;
+		margin-bottom: 20px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			width: 90%;
+			height: 8px;
+			transform: translateX(-50%);
+			border-radius: 50%;
+			box-shadow: 0 5px 10px rgba($color: #26272A, $alpha: 0.5);
+			z-index: -1;
+		}
+	}
+}
