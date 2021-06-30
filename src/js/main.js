@@ -64,6 +64,31 @@ documentReady(() => {
 		}
 	});
 
+	// скопировать текст в буфер обмена
+	const copyText = document.querySelector(".js--copied-text");
+	const copyTextButton = document.querySelector(".js--copy-text-button");
+	const copyTextTooltipText = document.querySelector(".contacts__tooltip-text");
+	const copyTextTooltip = document.querySelector(".contacts__tooltip");
+
+	copyTextButton.addEventListener("click", function(e){
+		e.preventDefault();
+		copyingText();
+	});
+
+	let copyingText = function() {
+		copyText.select();
+		document.execCommand("copy");
+
+		copyTextTooltipText.innerText = copyText.value;
+		copyTextTooltip.style.opacity = "1";
+		copyTextTooltip.style.visibility = "visible";
+
+		setTimeout(function(){
+			copyTextTooltip.style.opacity = "0";
+			copyTextTooltip.style.visibility = "hidden";
+		}, 1500)
+	}
+
 })
 
 // яндекс карты

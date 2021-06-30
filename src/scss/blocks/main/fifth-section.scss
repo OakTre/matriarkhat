@@ -103,6 +103,10 @@
 					opacity: 1;
 				}
 			}
+
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -132,6 +136,10 @@
 			max-width: 760px;
 			width: 100%;
 			min-height: 282px;
+
+			._overflow {
+				overflow: hidden;
+			}
 
 			h3 {
 				font-family: $second-font-family;

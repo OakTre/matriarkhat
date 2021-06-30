@@ -22,9 +22,12 @@ section.section.contacts
 					li.contacts__info-item
 						span
 							|	Координаты:
-						|	55.780937, 37.580167
-						a(class="contacts__info-item-coordinates", href="#")
+						input(class="contacts__info-copy-text js--copied-text", type="text", value="55.780937, 37.580167")
+						a(class="contacts__info-item-coordinates js--copy-text-button", href="#")
 							|	Скопировать
+						span.contacts__tooltip
+							|	Текст скопирован:
+							span.contacts__tooltip-text
 				.contacts__inst
 					.contacts__inst-info
 						span.contacts__inst-info-label

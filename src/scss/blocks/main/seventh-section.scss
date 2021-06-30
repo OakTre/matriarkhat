@@ -63,7 +63,19 @@
 		display: flex;
 		flex-wrap: wrap;
 
+		&-copy-text {
+			background-color: transparent;
+			color: $color-white;
+			border: none;
+			border-radius: 0;
+			outline: none;
+			pointer-events: none;
+			padding: 0;
+			width: 161px;
+		}
+
 		&-item {
+			position: relative;
 			font-size: 1rem;
 			color: $color-white;
 
@@ -150,6 +162,34 @@
 				}
 			}
 		}
+	}
+
+
+	&__tooltip {
+		position: absolute;
+		top: -100%;
+		right: -20px;
+		z-index: 15;
+		font-size: 0.9rem !important;
+		text-transform: none !important;
+		background-color: $color-brown-light;
+		color: $color-dark !important;
+		padding: 10px;
+		margin: 0 !important;
+		text-align: center;
+		max-width: 160px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity $main-transition;
+	}
+
+	&__tooltip-text {
+		font-size: 0.9rem !important;
+		text-transform: none !important;
+		color: $color-dark !important;
+		margin: 0 !important;
+		margin-top: 5px !important;
+		display: block;
 	}
 
 	&__inst {

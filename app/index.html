@@ -326,8 +326,10 @@
                       </picture>
                     </div>
                     <article class="specialists__content-item-article">
-                      <h3>Колорист</h3>
-                      <p>Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания.</p>
+                      <div class="_overflow">
+                        <h3>Колорист</h3>
+                        <p>Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания.</p>
+                      </div>
                       <button class="button_reset specialists__button">
                         <div class="specialists__button-circle">
                           <svg class="icon icon-icon-arrow2">
@@ -344,8 +346,10 @@
                       </picture>
                     </div>
                     <article class="specialists__content-item-article">
-                      <h3>Специалист по дизайну волос</h3>
-                      <p>подготавливает срез под необходимый цвет. При осветлении мы делаем упор на наращенные прядки, чтобы не вредить родным волосам.</p>
+                      <div class="_overflow">
+                        <h3>Специалист по дизайну волос</h3>
+                        <p>подготавливает срез под необходимый цвет. При осветлении мы делаем упор на наращенные прядки, чтобы не вредить родным волосам.</p>
+                      </div>
                       <button class="button_reset specialists__button">
                         <div class="specialists__button-circle">
                           <svg class="icon icon-icon-arrow2">
@@ -362,8 +366,10 @@
                       </picture>
                     </div>
                     <article class="specialists__content-item-article">
-                      <h3>2 мастера-капсулятора</h3>
-                      <p>Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания.</p>
+                      <div class="_overflow">
+                        <h3>2 мастера-капсулятора</h3>
+                        <p>Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания.</p>
+                      </div>
                       <button class="button_reset specialists__button">
                         <div class="specialists__button-circle">
                           <svg class="icon icon-icon-arrow2">
@@ -380,8 +386,10 @@
                       </picture>
                     </div>
                     <article class="specialists__content-item-article">
-                      <h3>2 мастера по наращиванию</h3>
-                      <p>Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания.</p>
+                      <div class="_overflow">
+                        <h3>2 мастера по наращиванию</h3>
+                        <p>Красит клиента, если наращивание будет с окрашиванием. Создает любые оттенки с помощью самых последних тенденций в сфере окрашивания.</p>
+                      </div>
                       <button class="button_reset specialists__button">
                         <div class="specialists__button-circle">
                           <svg class="icon icon-icon-arrow2">
@@ -399,6 +407,11 @@
         <section class="section facts">
           <div class="facts__row">
             <div class="facts__col">
+              <div class="facts__chief">
+                <div class="facts__chief_circle"></div>
+                <div class="facts__chief-head">	Марина<br>	Пилюкова</div>
+                <div class="facts__chief-bottom">	Основатель<br>	студии</div>
+              </div>
               <div class="facts__img">
                 <picture>
                   <source type="image/webp" data-srcset="img/facts-img.webp" srcset="img/placeholder.png"/><img class="lazy" data-src="img/facts-img.png" alt="Наша комада"/>
@@ -438,7 +451,9 @@
                 <ul class="contacts__info">
                   <li class="contacts__info-item"><span>	Адрес:</span>	Москва, 3-я улица Ямского поля, 9 к. 3</li>
                   <li class="contacts__info-item"><span>	Телефон:</span>	+7 (985) 135-05-84<a class="contacts__info-item-tel" href="tel:+79851350584">	Заказать звонок</a></li>
-                  <li class="contacts__info-item"><span>	Координаты:</span>	55.780937, 37.580167<a class="contacts__info-item-coordinates" href="#">	Скопировать</a></li>
+                  <li class="contacts__info-item"><span>	Координаты:</span>
+                    <input class="contacts__info-copy-text js--copied-text" type="text" value="55.780937, 37.580167"><a class="contacts__info-item-coordinates js--copy-text-button" href="#">	Скопировать</a><span class="contacts__tooltip">	Текст скопирован:<span class="contacts__tooltip-text"></span></span>
+                  </li>
                 </ul>
                 <div class="contacts__inst">
                   <div class="contacts__inst-info"><span class="contacts__inst-info-label">	Instagram:</span>
