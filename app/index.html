@@ -531,23 +531,23 @@
                     </div>
                     <div class="consultation-form__group">
                       <div class="consultation-form__group-col">
-                        <label class="consultation-form__label"><span class="consultation-form__legend">
+                        <label class="consultation-form__label">
+                          <input class="consultation-form__input" type="text" name="name"><span class="consultation-form__legend">
                             <svg class="icon icon-user">
                               <use xlink:href="img/sprite.svg#user"></use>
-                            </svg>	Имя</span>
-                          <input class="consultation-form__input" type="text" name="name">
+                            </svg><span class="consultation-form__legend-text">	Имя</span></span>
                         </label>
-                        <label class="consultation-form__label"><span class="consultation-form__legend">
+                        <label class="consultation-form__label">
+                          <input class="consultation-form__input" type="tel" name="tel"><span class="consultation-form__legend">
                             <svg class="icon icon-tel">
                               <use xlink:href="img/sprite.svg#tel"></use>
-                            </svg>	Номер телефона</span>
-                          <input class="consultation-form__input" type="tel" name="tel">
+                            </svg><span class="consultation-form__legend-text">	Номер телефона</span></span>
                         </label>
-                        <label class="consultation-form__label _textarea"><span class="consultation-form__legend _textarea-legend">
+                        <label class="consultation-form__label _textarea">
+                          <textarea class="consultation-form__textearea" name="text" placeholder="Какое наращивание ты хочешь? Длина, загущение – воплотим любую твою идею!"></textarea><span class="consultation-form__legend _textarea-legend">
                             <svg class="icon icon-text">
                               <use xlink:href="img/sprite.svg#text"></use>
                             </svg>	Желаемый образ</span>
-                          <textarea class="consultation-form__textearea" name="text" placeholder="Какое наращивание ты хочешь? Длина, загущение – воплотим любую твою идею!"></textarea>
                         </label>
                       </div>
                       <div class="consultation-form__group-col">
@@ -586,7 +586,41 @@
         </section>
       </main>
       <footer class="footer">
-        <h1>footer</h1>
+        <div class="site-container">
+          <div class="footer__row">
+            <div class="footer__col"><a class="footer__logo main-logo" href="#"><img src="img/logo.png" alt="Лого">
+                <p>	Студия архитектуры волос Марины Пилюковой</p></a></div>
+            <div class="footer__col">
+              <div class="footer__location main-location">
+                <svg class="icon icon-marker">
+                  <use xlink:href="img/sprite.svg#marker"></use>
+                </svg>
+                <p>	Москва, 3-я улица Ямского поля, 9 к. 3</p>
+              </div>
+            </div>
+            <div class="footer__col"><a class="footer__inst" href="#">
+                <svg class="icon icon-inst">
+                  <use xlink:href="img/sprite.svg#inst"></use>
+                </svg><span>	@matriarkhat</span></a></div>
+            <div class="footer__col">
+              <div class="footer__btn-group">
+                <div class="phone-content_wrap">
+                  <svg class="icon icon-phone">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg><a class="phone-content" href="tel:+79851350584">	+7 (985) 135-05-84</a>
+                </div>
+                <button class="button_reset footer__button-call"><span>	Заказать звонок</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="site-container">
+            <div class="footer__copyright_wrap">
+              <div class="footer__copyright-text"><span>	Сайт не является публичной офертой. 2021г.</span>	/<a class="footer__copyright-policy" href="#">	Политика конфиденциальности</a></div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   </body>

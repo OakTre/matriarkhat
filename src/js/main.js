@@ -16,9 +16,57 @@ documentReady(() => {
 	initTabs();
 	fourthSecAnim();
 	initContatsSlider();
+
+	const myInput = document.querySelectorAll(".consultation-form__input");
+	const myTextArea = document.querySelector(".consultation-form__textearea");
+	const myFileInput = document.querySelector(".consultation-form__input-file");
+
+	myInput.forEach(function(el){
+		el.addEventListener("change", function(){
+			let inputLabel = el.closest(".consultation-form__label");
+
+			if (!el.value) {
+				inputLabel.querySelector(".consultation-form__legend-text").classList.remove("_active");
+				inputLabel.querySelector(".icon").classList.remove("_active");
+			} else {
+				inputLabel.querySelector(".consultation-form__legend-text").classList.add("_active");
+				inputLabel.querySelector(".icon").classList.add("_active");
+			}
+
+		})
+	});
+
+	myTextArea.addEventListener("change", function(){
+		let textareaLabel = this.closest(".consultation-form__label");
+
+		if(!this.value) {
+			textareaLabel.querySelector(".icon").classList.remove("_active");
+		} else {
+			textareaLabel.querySelector(".icon").classList.add("_active");
+		}
+	});
+
+	var splitText = function (str) {
+		return str.split('\\').pop().split('/').pop();
+	}
+
+	myFileInput.addEventListener("change", function(){
+		let fileInputLabel = this.closest(".consultation-form__file-label");
+
+		if(this.value) {
+			let fileName = splitText(this.value);
+
+			fileInputLabel.querySelector(".consultation-form__file-label-text").innerText = "Файл '"+`${fileName}`+"' загружен.";
+			console.log(this.value);
+		} else {
+			fileInputLabel.querySelector(".consultation-form__file-label-text").innerText = "Файл не выбран";
+			console.log(this.value);
+		}
+	});
+
 })
 
-
+// яндекс карты
 ;(function() {
 	if (typeof ymaps === 'undefined') {
 	  return;

@@ -9,6 +9,7 @@
 		position: absolute;
 		bottom: 2px;
 		right: -350px;
+		z-index: 3;
 	}
 
 	&__img-bg {
@@ -108,9 +109,39 @@
 		position: relative;
 		display: block;
 		margin-bottom: 16px;
+		z-index: 10;
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			transform: translateY(-50%);
+			background-color: $color-brown-light;
+			opacity: 0;
+			transition: opacity $main-transition;
+		}
+
+		&._textarea {
+			&::before {
+				top: 22px;
+				transform: none;
+			}
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -130,6 +161,10 @@
 			margin-right: 16px;
 
 			fill: $color-light-grey-2;
+
+			&._active {
+				fill: $color-brown-light;
+			}
 		}
 
 		.icon-tel {
@@ -138,6 +173,10 @@
 			margin-right: 15px;
 
 			fill: $color-light-grey-2;
+
+			&._active {
+				fill: $color-brown-light;
+			}
 		}
 
 		&._textarea-legend {
@@ -149,7 +188,17 @@
 				height: 18px;
 				margin-right: 14px;
 				fill: $color-light-grey-2;
+
+				&._active {
+					fill: $color-brown-light;
+				}
 			}
+		}
+	}
+
+	&__legend-text {
+		&._active {
+			opacity: 0;
 		}
 	}
 
@@ -161,6 +210,17 @@
 		min-height: 55px;
 		padding-left: 48px;
 		color: $color-white;
+
+		&:active,
+		&:focus {
+			& + .consultation-form__legend .consultation-form__legend-text {
+				opacity: 0;
+			}
+
+			& + .consultation-form__legend .icon {
+				fill: $color-brown-light;
+			}
+		}
 	}
 
 	&__textearea {
@@ -173,6 +233,13 @@
 		padding-right: 37px;
 		color: #FFF;
 		border: none;
+
+		&:active,
+		&:focus {
+			& + .consultation-form__legend .icon {
+				fill: $color-brown-light;
+			}
+		}
 	}
 
 	&__file-label {

@@ -1,2 +1,37 @@
 footer.footer
-	h1 footer
+	.site-container
+		.footer__row
+			.footer__col
+				a(class="footer__logo main-logo", href="#")
+					img(src="img/logo.png", alt="Лого")
+					p
+						|	Студия архитектуры волос Марины Пилюковой
+			.footer__col
+				.footer__location.main-location
+						+icon("marker")
+						p
+							|	Москва, 3-я улица Ямского поля, 9 к. 3
+			.footer__col
+				a(class="footer__inst", href="#")
+						+icon("inst")
+						span
+							|	@matriarkhat
+			.footer__col
+				.footer__btn-group
+					.phone-content_wrap
+						+icon("phone")
+						a(class="phone-content", href="tel:+79851350584")
+							|	+7 (985) 135-05-84
+
+					button.button_reset.footer__button-call
+						span
+							|	Заказать звонок
+	.footer__copyright
+		.site-container
+			.footer__copyright_wrap
+				.footer__copyright-text
+					span
+						|	Сайт не является публичной офертой. 2021г.
+					|	/
+					a(class="footer__copyright-policy", href="#")
+						|	Политика конфиденциальности

@@ -1,3 +1,153 @@
 .footer {
-    color: red;
+
+
+	&__row {
+		display: flex;
+		// align-items: center;
+		flex-wrap: wrap;
+		padding: 51px 0;
+	}
+
+	&__col {
+		&:nth-child(1) {
+			margin-right: 161px;
+		}
+
+		&:nth-child(2) {
+			max-width: 300px;
+			margin-right: 87px;
+		}
+
+		&:nth-child(3) {
+
+		}
+
+		&:nth-child(4) {
+			margin-left: auto;
+			text-align: end;
+		}
+
+	}
+
+	&__location {
+		align-items: stretch;
+
+		p {
+			line-height: 1.5;
+		}
+	}
+
+	&__inst {
+		display: flex;
+		align-items: center;
+
+		.icon-inst {
+			width: 21px;
+			height: 21px;
+			margin-right: 10px;
+
+			fill: $color-brown-light;
+		}
+
+		span {
+			color: $color-white;
+			font-size: 1rem;
+			line-height: 1.5;
+		}
+	}
+
+	&__btn-group {
+
+		.phone-content_wrap {
+			display: flex;
+			align-items: center;
+		}
+
+		.icon-phone {
+			width: 18px;
+			height: 18px;
+
+			fill: $color-white;
+			opacity: 0.5;
+		}
+
+		.phone-content {
+			color: $color-white !important;
+			font-size: 1rem;
+			line-height: 1.5;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__button-call {
+
+		&:hover {
+			span {
+				&::before {
+					transform: translateX(100%);
+				}
+			}
+		}
+
+		span {
+			position: relative;
+			display: inline-block;
+			font-size: 1rem;
+			line-height: 1.5;
+			color: $color-brown-light;
+			padding-bottom: 3px;
+			overflow: hidden;
+			cursor: pointer;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 2px;
+				border-bottom: 1px dashed $color-brown-light;
+				transition: transform $main-transition;
+
+			}
+		}
+	}
+
+	&__copyright {
+		padding: 30px 0;
+		background-image: url(../img/innovation-bg.webp);
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__copyright_wrap {
+		display: flex;
+	}
+
+	&__copyright-text {
+		color: $color-white;
+		span {
+			font-size: 1rem;
+			line-height: 1.5;
+			color: #807979;
+		}
+	}
+
+	&__copyright-policy {
+		position: relative;
+		color: $color-white;
+		font-size: 1rem;
+		line-height: 1.5;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -3px;
+			height: 1px;
+			width: 100%;
+			background-color: $color-white;
+		}
+	}
 }

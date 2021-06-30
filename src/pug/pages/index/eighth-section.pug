@@ -19,20 +19,22 @@ section.section.consultation
 						.consultation-form__group
 							.consultation-form__group-col
 								label.consultation-form__label
+									input(class="consultation-form__input", type="text", name="name")
 									span.consultation-form__legend
 										+icon("user")
-										|	Имя
-									input(class="consultation-form__input", type="text", name="name")
+										span.consultation-form__legend-text
+											|	Имя
 								label.consultation-form__label
+									input(class="consultation-form__input", type="tel", name="tel")
 									span.consultation-form__legend
 										+icon("tel")
-										|	Номер телефона
-									input(class="consultation-form__input", type="tel", name="tel")
+										span.consultation-form__legend-text
+											|	Номер телефона
 								label.consultation-form__label._textarea
+									textarea(class="consultation-form__textearea", name="text", placeholder="Какое наращивание ты хочешь? Длина, загущение – воплотим любую твою идею!")
 									span.consultation-form__legend._textarea-legend
 										+icon("text")
 										|	Желаемый образ
-									textarea(class="consultation-form__textearea", name="text", placeholder="Какое наращивание ты хочешь? Длина, загущение – воплотим любую твою идею!")
 							.consultation-form__group-col
 								label.consultation-form__file-label
 									input(class="consultation-form__input-file visually-hidden", type="file")
