@@ -5,7 +5,7 @@ SwiperCore.use([Navigation, Pagination]);
 
 export function initSlider() {
 	const swiper = new Swiper('.swiper-container', {
-		slidesPerView: 3,
+		slidesPerView: 1,
 		centeredSlides: true,
 		loop: true,
 		speed: 800,
@@ -16,6 +16,17 @@ export function initSlider() {
 		pagination: {
 			el: ".examples__slider-pagination",
 			clickable: true,
-		}
+		},
+		breakpoints: {
+			640: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			1024: {
+				slidesPerView: 3,
+			},
+		},
 	});
 }

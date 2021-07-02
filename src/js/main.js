@@ -89,6 +89,40 @@ documentReady(() => {
 		}, 1500)
 	}
 
+
+	// плавный скролл к элементу
+	// function scrollTo(element, to, duration) {
+	// 	if (duration <= 0) return;
+	// 	var difference = to - element.scrollTop;
+	// 	var perTick = difference / duration * 10;
+
+	// 	setTimeout(function() {
+	// 		element.scrollTop = element.scrollTop + perTick;
+	// 		if (element.scrollTop === to) return;
+	// 		scrollTo(element, to, duration - 10);
+	// 	}, 10);
+	// }
+
+	if (window.matchMedia("(max-width: 501px)").matches) {
+		const scrollToButton = document.querySelectorAll(".specialists__nav-item");
+
+		scrollToButton.forEach(function(el){
+			el.addEventListener("click", function(e){
+				e.preventDefault();
+				const scrollToPath = e.target.dataset.tabsParent;
+
+				let scrollToElement = el.closest(".specialists__row").querySelector(`[data-tabs-child="${scrollToPath}"]`);
+
+				setTimeout(function(){
+					scrollToElement.scrollIntoView({
+						behavior: 'smooth',
+						block: 'end'
+					})
+				}, 50)
+			});
+		})
+	}
+
 })
 
 // яндекс карты

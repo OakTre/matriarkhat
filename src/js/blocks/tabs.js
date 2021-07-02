@@ -11,11 +11,10 @@ export function initTabs() {
 
 	if (tabs) {
 		tabs.forEach(function(el){
-			let parent = el;
+
 			el.addEventListener("click", function(e){
 				if(e.target.classList.contains("tabs__button")) {
 					const tabsPath = e.target.dataset.tabsParent;
-					console.log(tabsPath);
 					el.querySelectorAll(".tabs__button").forEach(function(el){ el.classList.remove("_active") })
 					el.querySelector(`[data-tabs-parent="${tabsPath}"]`).classList.add("_active");
 

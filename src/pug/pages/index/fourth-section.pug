@@ -5,6 +5,13 @@ section.section.dreams
 	.dreams__bg-img
 		+icon("dreams-bg")
 	.site-container
+		.dreams__title._mobile
+			h2
+				|	10
+				sub
+					|	лет
+				span
+					|	воплощаем мечты
 		ul.dreams__list
 			each val, key in dreams_list
 				- dreams_num++
@@ -28,6 +35,8 @@ section.section.dreams
 							.dreams__list-item_bottom
 								h3= key
 								p= val
+								span.dreams__list-item_mobile-button
+									|	Узнать подробнее
 				else
 					li.dreams__list-item._events-none
 						a(class="dreams__list-item-link", href="#")
@@ -41,4 +50,6 @@ section.section.dreams
 							.dreams__list-item_bottom
 								h3= key
 								p= val
+								span.dreams__list-item_mobile-button
+									|	Узнать подробнее
 

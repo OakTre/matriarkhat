@@ -6,6 +6,7 @@
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	z-index: 10;
 
 	&__img {
 		position: absolute;
@@ -188,6 +189,361 @@
 				height: 16px;
 				fill: $color-dark;
 				flex-shrink: 0;
+			}
+		}
+	}
+
+
+	@include _1536 {
+		overflow: hidden;
+		&__title {
+			h2 {
+				span {
+					font-size: rem(32px);
+				}
+			}
+		}
+
+		&__content {
+			&-item-article {
+				min-height: auto;
+				left: -385px;
+				padding: 40px;
+			}
+			&-item-img {
+				width: 80%;
+				margin-left: auto;
+			}
+		}
+
+		&__img {
+			width: 50%;
+			left: -100px;
+		}
+	}
+
+	@include _1440 {
+		padding-top: 81px;
+		&__img {
+			width: 60%;
+			left: -240px;
+		}
+
+		&__content {
+			&-item-article {
+				left: -275px;
+				bottom: -124px;
+			}
+			&-item-img {
+				width: 70%;
+				margin-left: auto;
+			}
+		}
+	}
+
+	@include _1366 {
+		&__title {
+			h2 {
+				span {
+
+				}
+			}
+		}
+
+		&__content {
+			&-item-article {
+				left: -205px;
+				p {
+					max-width: 398px;
+					// font-size: 0.9rem;
+				}
+			}
+		}
+
+		&__button {
+			font-size: 0.9rem;
+
+			&-circle {
+				width: 56px;
+				height: 56px;
+			}
+		}
+	}
+
+	@include _1280 {
+		&__title {
+			margin-bottom: 54px;
+		}
+		&__content {
+			&-item-article {
+				left: -285px;
+				padding: 30px 40px;
+				max-width: 650px;
+				p {
+					font-size: 0.9rem;
+				}
+			}
+		}
+
+		&__nav-item {
+			font-size: 0.9rem;
+			margin-bottom: 20px;
+			line-height: 1.4;
+		}
+
+		&__col {
+			&:nth-child(1) {
+				width: 50%;
+			}
+
+			&:nth-child(2) {
+				width: 50%;
+			}
+		}
+
+		&__img {
+			width: 50%;
+			left: -190px;
+		}
+	}
+
+	@include _1200 {
+		padding-bottom: 309px;
+		&__title {
+
+		}
+
+		&__content {
+			margin-top: 70px;
+			&-item-article {
+				left: -415px;
+				bottom: -204px;
+				max-width: none;
+				width: 650px;
+
+				h3 {
+					// font-size: 0.9rem;
+				}
+			}
+			&-item-img {
+				width: 100%;
+			}
+		}
+
+		&__img {
+			width: 80%;
+			left: -320px;
+		}
+	}
+
+	@include _992 {
+		padding-top: 61px;
+
+		&__content {
+			&-item-article {
+				left: -335px;
+				bottom: -224px;
+
+				h3 {
+					max-width: 52%;
+				}
+			}
+		}
+
+		&__img {
+			width: 90%;
+			left: -460px;
+		}
+
+		&__title {
+			h2 {
+				font-size: 1.3rem;
+				span {
+					font-size: 1.8rem;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	@include _769 {
+		padding-bottom: 60px;
+		&__content {
+			&-item-article {
+				position: static;
+				left: auto;
+				bottom: auto;
+				width: auto;
+				padding-top: 60px;
+
+				h3 {
+					line-height: 1.5;
+					max-width: 100%;
+				}
+			}
+
+			&-item-img {
+				position: absolute;
+				top: -280px;
+				right: 0;
+				width: 60%;
+			}
+		}
+
+		&__img {
+			left: -250px;
+		}
+
+		&__row {
+			flex-direction: column;
+		}
+
+		&__col {
+			&:nth-child(1) {
+				width: auto;
+			}
+
+			&:nth-child(2) {
+				width: auto;
+			}
+		}
+
+		&__nav-item {
+			font-size: 1rem;
+			line-height: 1.5;
+		}
+	}
+
+	@include _740 {
+		&__content {
+			&-item-article {
+				padding: 60px 30px 30px 30px;
+			}
+
+			&-item-img {
+				top: -200px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 34px;
+			h2 {
+				font-size: 1.25rem;
+				span {
+					font-size: 1.7rem;
+				}
+			}
+		}
+	}
+
+	@include _500 {
+		&__content {
+
+			&-item-img {
+				position: static;
+				top: auto;
+				right: auto;
+				width: 100%;
+			}
+		}
+
+		&__nav {
+			max-width: 100%;
+
+			&-item {
+				&::before {
+					left: 0;
+				}
+
+				&._active {
+					&::before {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&__img {
+			width: 140%;
+		}
+	}
+
+	@include _480 {
+		&__title {
+			h2 {
+				font-size: 1.15rem;
+				span {
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		&__img {
+			width: 150%;
+		}
+
+		&__content {
+			&-item-article {
+				padding: 40px 30px 30px;
+			}
+		}
+
+		&__nav-item {
+			padding-left: 0;
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	@include _375 {
+		&__content {
+			margin-top: 40px;
+
+			&-item {
+				padding: 0 24px;
+				margin: 0 -24px;
+			}
+
+			&-item-img {
+				margin: 0 -24px;
+				width: auto;
+			}
+
+			&-item-article {
+				padding: 40px 24px;
+				margin: 0 -24px;
+			}
+		}
+
+		&__title {
+			h2 {
+				line-height: 1.2;
+				span {
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+		&__nav-item {
+			margin-bottom: 16px;
+		}
+	}
+
+	@include _320 {
+		&__title {
+			h2 {
+				font-size: 1rem;
+				span {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		&__button {
+			&-circle {
+				margin-right: 14px;
 			}
 		}
 	}

@@ -11,6 +11,12 @@ html {
 	}
 }
 
+body {
+	@include _2100 {
+		zoom: 1.2;
+	}
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);

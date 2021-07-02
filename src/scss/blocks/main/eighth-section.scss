@@ -48,8 +48,164 @@
 		}
 	}
 
-	&__form {
+	@include _1536 {
+		&__img {
+			right: -200px;
+			width: 110%;
+		}
+	}
 
+	@include _1440 {
+		&__img-bg {
+			left: -80px;
+		}
+
+		&__img {
+			right: -167px;
+		}
+	}
+
+
+	@include _1366 {
+		&__img-bg {
+			left: -140px;
+		}
+
+		&__img {
+			right: -138px;
+			width: 120%;
+		}
+
+		&_form-wrapper {
+			padding: 54px 0 54px 54px;
+		}
+	}
+
+	@include _1280 {
+		&__img {
+			right: auto;
+			left: -30px;
+			width: 130%;
+		}
+
+		&__col {
+			&:nth-child(1) {
+				max-width: 30%;
+			}
+
+			&:nth-child(2) {
+				max-width: 70%;
+			}
+		}
+
+		&__img-bg {
+			left: -140px;
+			width: 49.5%;
+		}
+	}
+
+	@include _1200 {
+		&__img-bg {
+			left: -260px;
+			width: 67%;
+		}
+
+		&__img {
+			left: 0px;
+		}
+	}
+
+	@include _992 {
+		&__row {
+			flex-direction: column;
+		}
+
+		&__col {
+			&:nth-child(1) {
+				order: 2;
+				max-width: 100%;
+			}
+
+			&:nth-child(2) {
+				order: 1;
+				max-width: 100%;
+			}
+		}
+
+		&__img {
+			width: 40%;
+			right: -24px;
+			left: auto;
+		}
+
+		&__img-bg {
+			left: auto;
+			right: 280px;
+			width: 100%;
+		}
+	}
+
+	@include _769 {
+		&_form-wrapper {
+			padding: 34px 0 34px 34px;
+		}
+
+		&__col {
+			&:nth-child(2) {
+				padding-bottom: 170px;
+			}
+		}
+	}
+
+	@include _740 {
+		&_form-wrapper {
+			padding: 0;
+
+			&::before {
+				content: none;
+			}
+		}
+
+		&__img-bg {
+			display: none;
+		}
+	}
+
+	@include _500 {
+		&__col {
+			&:nth-child(2) {
+				padding-bottom: 180px;
+			}
+		}
+	}
+
+	@include _480 {
+		&__img {
+			display: none;
+		}
+
+		&__col {
+			&:nth-child(2) {
+				padding-bottom: 40px;
+			}
+		}
+
+		&__img-bg {
+			left: 90px;
+			right: auto;
+			display: block;
+			width: 210%;
+		}
+	}
+
+	@include _320 {
+		&__img-bg {
+			left: 0px;
+			right: auto;
+			width: 238%;
+			top: auto;
+			bottom: 0;
+		}
 	}
 }
 
@@ -209,6 +365,7 @@
 		width: 100%;
 		min-height: 55px;
 		padding-left: 48px;
+		padding-right: 23px;
 		color: $color-white;
 
 		&:active,
@@ -344,6 +501,220 @@
 		margin-left: 98px;
 		margin-top: -10px;
 	}
+
+	@include _1536 {
+		&__title {
+			margin-bottom: 40px;
+			h2 {
+				span {
+					font-size: rem(28px);
+				}
+			}
+
+			p {
+				font-size: 1rem;
+				max-width: 490px;
+			}
+		}
+	}
+
+	@include _1440 {
+		&__title {
+			h2 {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	@include _1366 {
+		&__input {
+			min-height: 50px;
+		}
+	}
+
+	@include _1280 {
+		&__group-col {
+			&:nth-child(2) {
+				max-width: 348px;
+			}
+		}
+	}
+
+	@include _1200 {
+		&__group-col {
+
+			&:nth-child(1) {
+				max-width: 334px;
+			}
+			&:nth-child(2) {
+				max-width: 258px;
+			}
+		}
+	}
+
+	@include _992 {
+		&__group {
+			justify-content: stretch;
+		}
+
+		&__group-col {
+
+			&:nth-child(1) {
+				margin-right: 30px;
+			}
+			&:nth-child(2) {
+			}
+		}
+	}
+
+	@include _740 {
+		&__title {
+			h2 {
+				font-size: 1.3rem;
+				span {
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		&__group {
+			flex-direction: column;
+		}
+
+		&__group-col {
+			&:nth-child(1) {
+				max-width: 100%;
+				margin-bottom: 30px;
+			}
+
+			&:nth-child(2) {
+				max-width: 100%;
+			}
+		}
+
+
+		&__title {
+			h2 {
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+	@include _500 {
+		&__title {
+			h2 {
+				span {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		&__button {
+			&-text {
+				max-width: 283px;
+			}
+		}
+	}
+
+	@include _480 {
+		&__button {
+			font-size: 0.9rem;
+			margin-left: 23px;
+			&-text {
+				max-width: 253px;
+				font-size: 0.9rem;
+			}
+
+			._form-circle {
+				width: 39px;
+				height: 60px;
+				left: -7%;
+				&::before {
+					width: 52px;
+    				height: 52px;
+				}
+			}
+
+			&:hover {
+				.icon-button-arrow {
+					transform: translateX(-11px);
+				}
+			}
+
+			&-text {
+				margin-left: 82px;
+			}
+		}
+
+		&__file-label-text {
+			font-size: 0.9rem;
+		}
+
+		&__title {
+			h2 {
+				span {
+					line-height: 1.7;
+				}
+			}
+			p {
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	@include _375 {
+		&__button {
+			.icon-button-arrow {
+				margin-right: 10px;
+			}
+
+			&-text {
+				margin-top: -20px;
+			}
+		}
+	}
+
+	@include _360 {
+		&__button {
+			padding: 8px 0;
+			line-height: 1.5;
+
+			.icon-button-arrow {
+				flex-shrink: 0;
+			}
+
+			span {
+				display: inline-block;
+				max-width: 50%;
+			}
+
+			&-text {
+				margin-top: -3px;
+			}
+		}
+	}
+
+	@include _320 {
+		&__title {
+			h2 {
+				font-size: 1.1rem;
+				span {
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+		&__button {
+			&-text {
+				display: none;
+			}
+
+			span {
+				max-width: 70%;
+			}
+		}
+	}
+
 }
 
 .form-agreement {
@@ -383,6 +754,12 @@
 			#check {
 				display: block;
 			}
+		}
+	}
+
+	@include _480 {
+		&__text {
+			font-size: 0.9rem;
 		}
 	}
 }

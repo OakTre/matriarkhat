@@ -21,6 +21,10 @@
 		margin-top: 6px;
 		margin-bottom: 65px;
 		pointer-events: none;
+
+		&._mobile {
+			display: none;
+		}
 		h2 {
 			font-family: $second-font-family;
 			font-weight: 400;
@@ -129,16 +133,20 @@
 
 			&:hover {
 				.icon-button-arrow {
-					width: 46px;
-					height: 41px;
+					width: 36px;
+					height: 16px;
 					margin-right: 10px;
-					transform: translateX(0px);
+					transform: translateX(-10px);
 				}
 
 				._dreams-circle {
 					width: 66px;
 				}
 			}
+		}
+
+		&_mobile-button {
+			display: none;
 		}
 
 		&-img {
@@ -175,6 +183,301 @@
 				line-height: 1.5;
 				color: $color-dark;
 				max-width: 92%;
+			}
+		}
+	}
+
+	@include _1536 {
+		&__list {
+			&-item_top {
+				padding-top: 511px;
+			}
+			&-item_bottom {
+				padding: 37px;
+			}
+		}
+
+		&__title {
+			h2 {
+				font-size: 2rem;
+
+				sub {
+					font-size: 1.3rem;
+				}
+
+				span {
+					font-size: rem(35px);
+				}
+			}
+		}
+
+		&__bg-img {
+			top: 180px;
+			left: 9%;
+		}
+	}
+
+	@include _1440 {
+		&__bg-img {
+			top: 170px;
+			left: 7%;
+		}
+	}
+
+	@include _1366 {
+		&__list {
+			&-item_top {
+				padding-top: 471px;
+			}
+		}
+
+		&__bg-img {
+			top: 131px;
+			left: 6%;
+		}
+	}
+
+	@include _1280 {
+		&__list {
+			&-item_top {
+				padding-top: 431px;
+			}
+
+			&-item_bottom {
+				h3 {
+					margin-bottom: 14px;
+				}
+				p {
+					font-size: 0.9rem;
+				}
+			}
+
+			&-item-button {
+				font-size: 0.9rem;
+			}
+
+		}
+		&__title {
+			margin-bottom: 45px;
+		}
+
+		&__bg-img {
+			top: 61px;
+    		left: 50%;
+    		transform: translateX(-50%);
+		}
+	}
+
+	@include _1200 {
+		&__list {
+			&-item_top {
+				padding-top: 350px;
+
+				&::before {
+					content: none;
+				}
+			}
+			&-item_bottom {
+				padding: 27px;
+			}
+
+			&-item-button {
+				display: none;
+			}
+
+			&-item_mobile-button {
+				position: relative;
+				display: inline-block;
+				margin-top: 16px;
+				font-family: $second-font-family;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: -3px;
+					width: 100%;
+					height: 1px;
+					background-color: $color-dark;
+				}
+			}
+		}
+
+		&__title {
+			h2 {
+				span {
+					font-size: rem(32px);
+					margin-top: 10px;
+				}
+			}
+		}
+
+		&__bg-img {
+			top: 121px;
+			.icon-dreams-bg {
+				width: 976px;
+				height: 920px;
+			}
+		}
+	}
+
+	@include _992 {
+		&__title {
+			h2 {
+				font-size: 1.8rem;
+
+				sub {
+					font-size: 1.1rem;
+				}
+				span {
+					font-size: 1.8rem;
+				}
+			}
+		}
+
+		&__list {
+			&-item_bottom {
+				h3 {
+					font-size: 0.9rem;
+				}
+			}
+
+			&-item_mobile-button {
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	@include _769 {
+		&__bg-img {
+			top: 261px;
+			.icon-dreams-bg {
+				width: 600px;
+				height: 600px;
+			}
+		}
+
+		&__list {
+			&-item_top {
+				padding-top: 270px;
+			}
+
+			&-item_bottom {
+				h3 {
+					line-height: 1.4;
+				}
+			}
+		}
+
+		&__title {
+			h2 {
+				span {
+					font-size: 1.7rem;
+				}
+			}
+		}
+	}
+
+	@include _740 {
+		&__title {
+			display: none;
+
+			&._mobile {
+				display: block;
+				margin-top: -300px;
+				margin-bottom: 25px;
+			}
+		}
+
+		&__list {
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: stretch;
+			margin-top: 0;
+
+			&-item {
+				width: calc(50% - 32px);
+			}
+
+			&-item-link {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			&-item_bottom {
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+
+				p {
+					margin-bottom: auto;
+				}
+			}
+
+			&-item_top {
+				padding-top: 300px;
+			}
+
+			&-item_mobile-button {
+				align-self: flex-start;
+			}
+		}
+
+		&__bg-img {
+			top: auto;
+			bottom: -90px;
+		}
+	}
+
+	@include _500 {
+		&__list {
+			&-item_top {
+				padding-top: 240px;
+			}
+		}
+
+		&__title {
+			&._mobile {
+				h2 {
+					span {
+						font-size: 1.6rem;
+					}
+				}
+			}
+		}
+	}
+
+	@include _480 {
+		&__list {
+			&-item {
+				width: calc(100% - 32px);
+			}
+		}
+	}
+
+	@include _375 {
+		&__title {
+			&._mobile {
+				h2 {
+					font-size: 1.4rem;
+					span {
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+	}
+
+	@include _320 {
+		&__title {
+			&._mobile {
+				h2 {
+					font-size: 1.2rem;
+					span {
+						font-size: 1.2rem;
+					}
+				}
 			}
 		}
 	}

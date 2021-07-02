@@ -504,8 +504,8 @@
 			&._mobile {
 				display: block;
 				top: auto;
-				right: -40px;
-				bottom: -30px;
+				right: 10px;
+				bottom: -50px;
 			}
 		}
 	}
@@ -531,7 +531,7 @@
 		&__img {
 			&._mobile {
 				right: -49px;
-				bottom: -17px;
+				bottom: -1px;
 				width: 50.1%;
 			}
 		}
@@ -591,6 +591,14 @@
 
 		&__info {
 			margin-bottom: 36px;
+			flex-direction: row;
+
+			p {
+				&:nth-child(1) {
+					margin-right: 20px;
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 
@@ -605,6 +613,18 @@
 				bottom: -7px;
 			}
 		}
+
+		&__info {
+			flex-direction: column;
+
+			p {
+				&:nth-child(1) {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+
 	}
 
 	@include _360 {
