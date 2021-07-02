@@ -585,8 +585,8 @@
 		}
 
 		&__background-img {
-			width: 201%;
-			left: -520px;
+			width: 181%;
+			left: -280px;
 		}
 
 		&__info {
@@ -603,9 +603,11 @@
 	}
 
 	@include _375 {
+		padding-top: 117px;
 		padding-bottom: 270px;
 		&__background-img {
-			left: -472px;
+			left: -392px;
+			width: 221%;
 		}
 
 		&__img {
@@ -629,7 +631,7 @@
 
 	@include _360 {
 		&__background-img {
-			left: -452px;
+			left: -352px;
 		}
 	}
 
@@ -677,7 +679,7 @@
 		}
 
 		&__background-img {
-			left: -402px;
+			left: -312px;
 		}
 	}
 

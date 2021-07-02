@@ -27,10 +27,6 @@ export function initMobileMenu() {
 			y: 0,
 			duration: 0.3
 		}, "-=0.1")
-		.to(".mobile-menu__button", {
-			y: 0,
-			duration: 0.3
-		}, "-=0.1")
 
 
 	buttonOpen.addEventListener("click", function() {

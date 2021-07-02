@@ -225,6 +225,7 @@
 	}
 
 	@include _1366 {
+		padding-bottom: 105px;
 		&__list {
 			&-item_top {
 				padding-top: 471px;
@@ -269,6 +270,8 @@
 	}
 
 	@include _1200 {
+		padding-bottom: 85px;
+
 		&__list {
 			&-item_top {
 				padding-top: 350px;
@@ -349,6 +352,7 @@
 	}
 
 	@include _769 {
+		padding-bottom: 75px;
 		&__bg-img {
 			top: 261px;
 			.icon-dreams-bg {

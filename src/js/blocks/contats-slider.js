@@ -1,18 +1,34 @@
 import Swiper from 'swiper';
+import gsap from 'gsap';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper/core';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export function initContatsSlider() {
+	const iconLike = document.querySelectorAll(".icon-like");
+
+	let test = function() {
+		iconLike.forEach(function(el){
+
+			gsap.to(el, {
+				y: -25,
+				opacity: 1,
+				duration: 1.8,
+				// yoyo:true,
+				repeat: -1
+			})
+
+		})
+	}
+
 	const swiper = new Swiper('.contacts__gallery', {
 		slidesPerView: 3,
 		spaceBetween: 20,
-		centeredSlides: true,
 		loop: true,
 		spaceBetween: 32,
-		speed: 900,
+		speed: 3000,
 		autoplay: {
-			delay: 900,
+			delay: 100,
 			disableOnInteraction: false,
 		},
 		breakpoints: {
@@ -36,6 +52,11 @@ export function initContatsSlider() {
 				slidesPerView: 6,
 				spaceBetween: 32,
 			},
+		},
+		on: {
+			init: function () {
+				test();
+			}
 		},
 	});
 }

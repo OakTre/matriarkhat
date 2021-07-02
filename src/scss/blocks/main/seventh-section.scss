@@ -289,8 +289,23 @@
 	}
 
 	&__gallery-item {
+		position: relative;
+
+		.icon-like {
+			display: none;
+		}
+
 		&:nth-child(2n) {
 			transform: translateY(54px);
+
+			.icon-like {
+				position: absolute;
+				top: 0;
+				left: 10px;
+				z-index: 15;
+				display: block;
+				opacity: 0;
+			}
 		}
 	}
 
@@ -410,6 +425,10 @@
 
 	@include _1366 {
 		padding-bottom: 70px;
+
+		&__gallery {
+			min-height: 261px;
+		}
 	}
 
 	@include _1280 {
@@ -459,9 +478,14 @@
 		&__button {
 			font-size: 0.9rem;
 		}
+
+		&__gallery {
+			min-height: 240px;
+		}
 	}
 
 	@include _1200 {
+		padding-bottom: 50px;
 		&__map {
 			width: 464px;
 			height: 477px;
@@ -471,6 +495,10 @@
 			&:nth-child(2) {
 				margin-left: 49px;
 			}
+		}
+
+		&__gallery {
+			min-height: 280px;
 		}
 	}
 
@@ -657,10 +685,25 @@
 			position: relative;
 			z-index: 15;
 			overflow: visible;
+
+			&-item {
+				.icon-like {
+					svg {
+						width: 50px;
+						height: 50px;
+					}
+				}
+			}
 		}
 
 		&__map {
 			height: 317px;
+		}
+	}
+
+	@include _500 {
+		&__gallery {
+			min-height: 208px;
 		}
 	}
 

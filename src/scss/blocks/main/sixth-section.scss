@@ -18,6 +18,7 @@
 
 	&__col {
 		position: relative;
+
 		&:nth-child(2) {
 			max-width: 47%;
 			width: 100%;
@@ -28,7 +29,16 @@
 			z-index: 10;
 			max-width: 53%;
 			width: 100%;
+
+			&:hover {
+				.facts__chief {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
 		}
+
+
 	}
 
 	&__chief {
@@ -39,12 +49,15 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		overflow: hidden;
+		// overflow: hidden;
 
 		width: 189px;
 		height: 189px;
 		background-color: $color-dark;
 		border-radius: 50%;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity $main-transition;
 
 		&_circle {
 			position: absolute;
@@ -85,6 +98,17 @@
 				width: 142%;
 				height: 1px;
 				background-color: $color-white;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: -71px;
+				bottom: 29.7px;
+				width: 99%;
+				height: 1px;
+				background-color: $color-white;
+				transform: rotate(45deg);
 			}
 		}
 
@@ -205,6 +229,12 @@
 				font-size: 0.9rem;
 				&::before {
 					width: 138%;
+				}
+
+				&::after {
+					left: -58px;
+					bottom: 23.7px;
+					width: 89%;
 				}
 			}
 
@@ -334,6 +364,11 @@
 				&::before {
 					width: 142%;
 				}
+
+				&::after {
+					left: -51px;
+    				bottom: 20.7px;
+				}
 			}
 
 			&-bottom {
@@ -390,6 +425,11 @@
 
 				&::before {
 					width: 139%;
+				}
+
+				&::after {
+					left: -45px;
+    				bottom: 19.7px;
 				}
 			}
 
@@ -474,6 +514,11 @@
 
 			&-head {
 				font-size: 0.8rem;
+
+				&::after {
+					left: -52px;
+					bottom: 20.7px;
+				}
 			}
 
 			&-bottom {
